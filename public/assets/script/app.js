@@ -4,31 +4,41 @@ $(document).ready(function() {
 
     var newCredit, totalCredit;
     window.onresize = function() {
-        console.log('height: ' + window.innerHeight);
-        console.log('width: ' + window.innerWidth);
+        // console.log('height: ' + window.innerHeight);
+        // console.log('width: ' + window.innerWidth);
         location.reload();
     }
 
+
+    function buyNewTicket() {
+
+    }
+
     $('#newGame').on('click', function(event) {
-        $.ajax({ url: "/game", method: "GET" })
-            .done(function(Data) {
-                location.reload();
-            })
+        // $.ajax({ url: "/game", method: "GET" })
+        //     .done(function(Data) {
+        //         console.log(Data);
+        //         $("#totalCredit").text(Data.user.credits);
+        //         location.reload();
+        //     })
+        location.reload();
     });
 
     $('#addCredit').on('click', function(event) {
         event.preventDefault();
         totalCredit += parseInt(newCredit);
         var myId = $('#myId').val().trim();
-        console.log(myId);
-        console.log(totalCredit, newCredit);
+        // console.log(myId);
+        // console.log(totalCredit, newCredit);
         var userCredit = {
             id: myId,
             credits: totalCredit
         };
-        console.log(userCredit);
+        // console.log(userCredit);
         $.post("/game", userCredit,
             function(data) {
+             //   console.log(data);
+                $("#totalCredit").text(data.credits);
                 if (data) {
                     if (newCredit > 0) {
                         alert("Yay! You are officially win $" +
@@ -156,7 +166,7 @@ $(document).ready(function() {
         //Determine the winning multiples;
         prizeMultiple = availableNum.slice(4, 8);
         prizes = prizeMultiple.map(function(val) {
-            return val * 10;
+            return val * 5;
         })
 
         displayPrize(prizes);

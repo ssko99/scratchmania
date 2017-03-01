@@ -2,16 +2,17 @@ var user = require('../models/user.js');
 
 module.exports = {
     renderGame: function(req, res) {
-
-        console.log('inside renderGame');
+        // console.log('inside rederGame req.user =>');
         // console.log(req.user);
+        // console.log('inside rederGame req.body =>');
         // console.log(req.body);
         if (req.user.id) {
             db.User.findOne({
                 where: {
-                    name: req.user.id
+                    id: req.user.id
                 }
             }).then(function(results) {
+                // console.log(results);
                 // console.log(results.dataValues.credits);
                 // console.log(results.dataValues.id);
                 res.render('game', {
@@ -45,8 +46,15 @@ module.exports = {
             }
         }).then(
             function(dbPost) {
-                console.log('updated success');
-                res.redirect('/game');
+            // console.log('inside addCredit');
+            // console.log(req.user);
+            // console.log(dbPost); 
+            var userCredit = {
+                id : req.body.id, 
+                credits: req.body.credits
+            }              
+                res.json(userCredit);
+              //  res.redirect('/game');
             }
         );
 
