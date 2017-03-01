@@ -1,0 +1,80 @@
+<div class="container ">
+        <div class="mainTitle"><span class="asapReg">Lottery</span><span class="greenText"> Scratch Ticket</span>
+            <span class="greenText">Mania</span>
+        </div>
+        <div class="greenText instruction">
+            Match any symbol on the top row to the symbol below, win the prizes on the same column.
+        </div>
+        <!--Grid that holds tools and drop areas-->
+        <div class="row gridContainer">
+            <div class="col-sm-10 col-sm-offset-1" style='background-color: red'>
+              <table id="productSizes" class="table">
+                    <thead>
+                        <tr>
+                            <td id="twinone"><img id="winone"></td>
+                            <td id="twintwo"><img id="wintwo"></td>
+                            <td id="twinthree"><img id="winthree"></td>
+                            <td id="twinfour"><img id="winfour"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="prize greenText" id="prizeone"></td>
+                            <td class="prize greenText" id="prizetwo"></td>
+                            <td class="prize greenText" id="prizethree"></td>
+                            <td class="prize greenText" id="prizefour"></td>
+                        </tr>
+                        <tr>
+                            <td id="toneone"><img id="oneone"></td>
+                            <td id="tonetwo"><img id="onetwo"></td>
+                            <td id="tonethree"><img id="onethree"></td>
+                            <td id="tonefour"><img id="onefour"></td>
+                        </tr>
+                        <tr>
+                            <td id="ttwoone"> <img id="twoone"></td>
+                            <td id="ttwotwo"> <img id="twotwo"></td>
+                            <td id="ttwothree"> <img id="twothree"></td>
+                            <td id="ttwofour"> <img id="twofour"></td>
+                        </tr>
+                        <tr>
+                            <td id="tthreeone"> <img id="threeone"></td>
+                            <td id="tthreetwo"> <img id="threetwo"></td>
+                            <td id="tthreethree"> <img id="threethree"></td>
+                            <td id="tthreefour"> <img id="threefour"></td>
+                        </tr>
+                        <tr>
+                            <td id="tfourone"> <img id="fourone"></td>
+                            <td id="tfourtwo"> <img id="fourtwo"></td>
+                            <td id="tfourthree"> <img id="fourthree"></td>
+                            <td id="tfourfour"> <img id="fourfour"></td>
+                        </tr>
+                        <tr>
+                            <td id="tfiveone"><img id="fiveone"></td>
+                            <td id="tfivetwo"> <img id="fivetwo"></td>
+                            <td id="tfivethree"> <img id="fivethree"></td>
+                            <td id="tfivefour"> <img id="fivefour"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-1">
+                <div class="text-center">
+                    <button id="addCredit" class="btn btn-primary btn-lg success">Redeem Ticket</button>   
+                     <input type="hidden" id="totalCredit" value="{{this.credits}}">
+                     <input type="hidden" id="myId" value="{{this.id}}">
+                    <br>
+                    <button id="newGame" class="btn btn-primary btn-lg success">Next Game</button>
+                    <div class="prize greenText mainTitle">Credit: 
+                  <label  type="text">{{this.credits}}</label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <script src="assets/script/scratchcard.js"></script>
+    <script src="assets/script/app.js"></script>

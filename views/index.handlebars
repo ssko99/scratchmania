@@ -1,0 +1,81 @@
+<h1>{{msg}}</h1>
+<h2>BIG DREAMS START HERE!</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="modal-header">
+                <h3>Have an Account?</h3>
+            </div>
+                <div class="well">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                        <li><a href="#create" data-toggle="tab">Create Account</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane active in">
+                            <form class="form-horizontal" name="signInForm" action="/auth/signIn" method="POST">
+                                <fieldset>
+                                    <div class="control-group">
+                                        <!-- Username -->
+                                        <label class="control-label" for="username">Username</label>
+                                        <div class="controls">
+                                            <input type="text" name="userName" id="userName" placeholder="" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- Password-->
+                                        <label class="control-label" for="password">Password</label>
+                                        <div class="controls">
+                                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <button class="btn btn-success">Login</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="create">
+                            <form name="signUpForm" action="/auth/signUp" method="post">
+                                <fieldset>
+                                    <div class="control-group">
+                                        <!-- Username -->
+                                        <label class="control-label" for="username">Username</label>
+                                        <div class="controls">
+                                            <input type="text" name="userName" id="userName" placeholder="" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- Password-->
+                                        <label class="control-label" for="password">Password</label>
+                                        <div class="controls">
+                                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="control-group">
+                                        <!-- Button -->
+                                        <div class="controls">
+                                            <button class="btn btn-success">Create Account</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+ {{> examplePartials/partial}}
+   <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
